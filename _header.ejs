@@ -16,6 +16,18 @@
 		<link rel="stylesheet" href="<%=relative_path%>css/style.css">
 		<!-- persian styles -->
 		<link rel="stylesheet" href="<%=relative_path%>css/rtl.css">
+		
+		<!-- jquery -->
+		<script src="<%=relative_path%>lib/jquery/jquery.min.js"></script>
+		
+		<%if(type=='archives'){%>
+			<!-- jqxtagcloud -->
+			<link rel="stylesheet" href="<%=relative_path%>lib/jqx/jqx.base.css" type="text/css" />
+			<script type="text/javascript" src="<%=relative_path%>lib/jqx/jqxcore.js"></script>    
+			<script type="text/javascript" src="<%=relative_path%>lib/jqx/jqxdata.js"></script>
+			<script src="<%=relative_path%>lib/jqx/jqxtagcloud.js"></script>
+		<%}%>
+		
 	</head>
 
 	<body class="max-width mx-auto px3 ltr">

@@ -10,6 +10,56 @@ if (!!$.prototype.justifiedGallery) {
 	$(".article-gallery").justifiedGallery(options);
 }
 
+function sortRule(arr, rev) {
+	if (rev == undefined) {
+		rev = 1;
+	} else {
+		rev = (rev) ? 1 : -1;
+	}
+	return function(a, b) {
+		for (var i = 0; i < arr.length; i++) {
+			let attr = arr[i]
+			if (a[attr] != b[attr]) {
+				if (a[attr] > b[attr]) {
+					return rev * 1;
+				} else {
+					return rev * -1;
+				}
+			}
+		}
+	}
+}
+
+function renderTagCloud(arr) {
+	var data = arr && arr.length > 0 ? arr : [];
+	data = data.sort(sortRule(['tagVal'], false))
+	if (data.length > 12) {
+		data.length = 12;
+	}
+	var source = {
+		localdata: data,
+		datatype: "array",
+		datafields: [{
+			name: 'tagName'
+		}, {
+			name: 'tagVal'
+		}, {
+			name: 'url'
+		}]
+	};
+	var dataAdapter = new $.jqx.dataAdapter(source, {});
+	$('#tagCloud').jqxTagCloud({
+		width: '100%',
+		minFontSize: 10,
+		maxFontSize: 18,
+		minColor: '#00AA99',
+		maxColor: '#00FFAA',
+		source: dataAdapter,
+		displayMember: 'tagName',
+		valueMember: 'tagVal'
+	});
+}
+
 $(document).ready(function() {
 	// img
 	document.addEventListener("error", function(e) {
@@ -18,7 +68,7 @@ $(document).ready(function() {
 			elem.style.display = 'none'
 		}
 	}, true);
-	
+
 	/**
 	 * Shows the responsive navigation menu on mobile.
 	 */

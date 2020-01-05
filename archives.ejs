@@ -1,4 +1,11 @@
 <%- include('_header',{type: "archives"}); %>
+	<div id="tagCloud"></div>
+	<script>
+		$(document).ready(function() {
+			var data = [];
+			renderTagCloud(data);
+		});
+	</script>
 	<div id="archive">
 	  <ul class="post-list">
 
@@ -14,9 +21,7 @@
 	      
 	    </div>
 	
-	
-	        <span>
-	    
+	        <span    
 	        <a class="" href="/hexo-theme-cactus/cactus-dark/public/2016/11/14/hello-world/">Hello World</a>
 	    
 	
