@@ -135,3 +135,16 @@ article
 
     &:before
       content: "|"
+	  
+citebefore(){
+	padding: 0 0.5em
+	content: "—"
+}
+article 
+  .content
+    blockquote
+	  cite
+	    font-size: 11px;
+	    color: $color-cite
+	    &:before
+          citebefore()
