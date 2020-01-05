@@ -69,6 +69,13 @@ $(document).ready(function() {
 		}
 	}, true);
 
+	// flexslider
+	$('.flexslider').flexslider({
+		directionNav: true,
+		pauseOnAction: false,
+		slideshowSpeed: 3000
+	});
+
 	/**
 	 * Shows the responsive navigation menu on mobile.
 	 */
