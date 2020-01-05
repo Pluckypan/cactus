@@ -108,6 +108,17 @@
 			</header>
 			<div class="content" itemprop="articleBody">
 				{{content}}
+				<figure class="highlight js">
+					<table>
+						<tbody>
+							<tr>
+								<td class="code">
+									<pre><span class="line marked"><span class="keyword">const</span> http = <span class="built_in">require</span>(<span class="string">'http'</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> hostname = <span class="string">'127.0.0.1'</span>;</span><br><span class="line"><span class="keyword">const</span> port = <span class="number">1337</span>;</span><br><span class="line"></span><br><span class="line">http.createServer(<span class="function">(<span class="params">req, res</span>) =&gt;</span> {</span><br><span class="line marked">  res.writeHead(<span class="number">200</span>, { <span class="string">'Content-Type'</span>: <span class="string">'text/plain'</span> });</span><br><span class="line marked">  res.end(<span class="string">'Hello World\n'</span>);</span><br><span class="line">}).listen(port, hostname, () =&gt; {</span><br><span class="line marked">  <span class="built_in">console</span>.log(<span class="string">`Server running at http://<span class="subst">${hostname}</span>:<span class="subst">${port}</span>/`</span>);</span><br><span class="line">});</span><br></pre>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</figure>
 			</div>
 		</article>
 	
