@@ -109,11 +109,14 @@
 			<div class="content" itemprop="articleBody">
 				{{content}}
 			</div>
+			<%if(config.comment&&config.comment.gitalk&&config.comment.gitalk.clientID){%>
+				<%- include('comment',{type: "post",'pname':'文章'});%>
+			<%}%>
 		</article>
 	
 		<div id="footer-post-container">
 			<div id="footer-post">
-	
+				
 			</div>
 		</div>
 	</div>		
