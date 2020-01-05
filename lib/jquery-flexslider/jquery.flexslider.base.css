@@ -1,6 +1,5 @@
 .flexslider {
 	position: relative;
-	min-height: 400px;
 	overflow: hidden;
 	background: url(images/loading.gif) 50% no-repeat;
 }
@@ -11,12 +10,12 @@
 }
 
 .slides li {
-	min-height: 400px;
+	
 }
 
 .flex-control-nav {
 	position: absolute;
-	bottom: 10px;
+	bottom: 20px;
 	z-index: 2;
 	width: 100%;
 	text-align: center;
@@ -49,7 +48,7 @@
 	position: absolute;
 	z-index: 3;
 	width: 100%;
-	top: 45%;
+	top: 40%;
 }
 
 .flex-direction-nav li a {
@@ -62,11 +61,11 @@
 }
 
 .flex-direction-nav li a.flex-prev {
-	left: 40px;
+	left: 20px;
 	background: url(images/prev.png) center center no-repeat;
 }
 
 .flex-direction-nav li a.flex-next {
-	right: 40px;
+	right: 20px;
 	background: url(images/next.png) center center no-repeat;
 }
