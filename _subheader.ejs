@@ -2,7 +2,7 @@
 				<a href="#">
 					<div id="logo" style="background-image: url(<%=relative_path%>images/logo.png);"></div>
 					<div id="title">
-						<h1>Cactus Dark</h1>
+						<h1><%=config.title%></h1>
 					</div>
 				</a>
 				<div id="nav">
@@ -10,10 +10,10 @@
 						<li class="icon">
 							<a href="#"><i class="fas fa-bars fa-2x"></i></a>
 						</li>
-						<li><a href="./">Home</a></li>
-						<li><a href="about">About</a></li>
-						<li><a href="archives">Writing</a></li>
-						<li><a href="projects">Projects</a></li>
+						<li><a href="<%=relative_path%>index">Home</a></li>
+						<li><a href="<%=relative_path%>about">About</a></li>
+						<li><a href="<%=relative_path%>archives">Writing</a></li>
+						<li><a href="<%=relative_path%>projects">Projects</a></li>
 					</ul>
 				</div>
 			</header>

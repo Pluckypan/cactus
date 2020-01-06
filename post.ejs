@@ -10,10 +10,10 @@
 		<span id="menu">
 			<span id="nav">
 				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="about/">About</a></li>
-					<li><a href="archives/">Writing</a></li>
-					<li><a href="projects/">Projects</a></li>
+					<li><a href="<%=relative_path%>index">Home</a></li>
+					<li><a href="<%=relative_path%>about">About</a></li>
+					<li><a href="<%=relative_path%>archives">Writing</a></li>
+					<li><a href="<%=relative_path%>projects">Projects</a></li>
 				</ul>
 			</span>
 	
@@ -37,10 +37,10 @@
 						</a>
 					</li>
 				</ul>
-				<span id="i-prev" class="info" style="display:none;">Previous post</span>
-				<span id="i-next" class="info" style="display:none;">Next post</span>
+				<span id="i-prev" class="info" style="display:none;">Not Support(Pre)</span>
+				<span id="i-next" class="info" style="display:none;">Not Support(Nex)</span>
 				<span id="i-top" class="info" style="display:none;">Back to top</span>
-				<span id="i-share" class="info" style="display:none;">Share post</span>
+				<span id="i-share" class="info" style="display:none;">Not Support(Share)</span>
 			</span>
 			<br />
 			<div id="share" style="display: none">
@@ -66,7 +66,7 @@
 		</span>
 	</div>
 	<div class="content index">
-		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+		<article class="post" itemscope itemtype="#">
 			<header>
 				<h1 class="posttitle" itemprop="name headline"><%=describe.name%></h1>
 				<div class="meta">

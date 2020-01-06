@@ -76,6 +76,9 @@ $(document).ready(function() {
 		slideshowSpeed: 3000
 	});
 
+	// year
+	$(".year").html(new Date().getFullYear());
+
 	/**
 	 * Shows the responsive navigation menu on mobile.
 	 */
