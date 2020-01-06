@@ -50,27 +50,17 @@
 				</ul>
 			</div>
 			<div id="toc">
-				<ol class="toc">
-					<li class="toc-item toc-level-1">
-						<a class="toc-link" href="#Heading-1">
-							<span class="toc-number">1.</span>
-							<span class="toc-text">Heading 1</span>
-						</a>
-						<ol class="toc-child">
+				<ol class="toc-child">
+					<%if(tocArray){%>
+						<%tocArray.forEach(function(itm,i){%>
 							<li class="toc-item toc-level-2">
-								<a class="toc-link" href="#Heading-2">
-									<span class="toc-number">1.1.</span>
-									<span class="toc-text">Heading 2</span>
+								<a class="toc-link" href="#<%=itm%>">
+									<span class="toc-number"><%=i%></span>
+									<span class="toc-text"><%=itm%></span>
 								</a>
 							</li>
-							<li class="toc-item toc-level-2">
-								<a class="toc-link" href="#Table">
-									<span class="toc-number">1.4.</span>
-									<span class="toc-text">Table</span>
-								</a>
-							</li>
-						</ol>
-					</li>
+						<%});%>
+					<%}%>
 				</ol>
 			</div>
 		</span>
@@ -78,32 +68,37 @@
 	<div class="content index">
 		<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 			<header>
-				<h1 class="posttitle" itemprop="name headline">Elements</h1>
+				<h1 class="posttitle" itemprop="name headline"><%=describe.name%></h1>
 				<div class="meta">
-					<span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
-						<span itemprop="name">Cactus Dark</span>
+					<span class="author" itemprop="author" itemscope itemtype="#">
+						<span itemprop="name"><%=config.user?config.user.name:config.title%></span>
 					</span>
 					<div class="postdate">
-						<time datetime="2013-12-24T22:29:08.000Z" itemprop="datePublished">24 Dec 2013</time>
+						<time datetime="" itemprop="datePublished"><%=describe.create_time%></time>
 					</div>
-					<div class="article-tag">
-						<i class="fa fa-eye"></i>
-						<span>
-							<span>268</span>
-						</span>
-					</div>
+					<%if(config.nav&&config.nav.busuanzi&&config.nav.busuanzi==true){%>
+					<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+						<%var iview=config.iconfont&&config.iconfont.family?(config.iconfont.family+' icon-view'):'fa fa-eye'%>
+						<div class="article-tag">
+							<i class="<%=iview%>"></i>
+							<span>
+								<span id="busuanzi_value_page_pv">0</span>
+							</span>
+						</div>
+					<%}%>
 					<div class="article-category">
 					        <i class="fas fa-archive"></i>
-					        <a class="category-link" href="#">Foo</a> › 
-							<a class="category-link" href="#">Bar</a> › 
-							<a class="category-link" href="#">Baz</a>
+					        <a class="category-link" href="#">默认</a> › 
+							<a class="category-link" href="#"><%=describe.category%></a>
 					</div>
-					<div class="article-tag">
-					        <i class="fas fa-tag"></i>
-					        <a class="tag-link" href="#">Bar</a>, 
-							<a class="tag-link" href="#">Baz</a>, 
-							<a class="tag-link" href="#">Foo</a>
-					</div>
+					<%if(describe.tags&&describe.tags.length>0){%>
+						<div class="article-tag">
+							<i class="fas fa-tag"></i>
+							<%describe.tags.forEach(function(tag){%> 
+								<a class="tag-link" href="#"><%=tag%></a>
+							<%});%>
+						</div>
+					<%}%>
 				</div>
 			</header>
 			<div class="content" itemprop="articleBody">
