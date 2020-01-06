@@ -1,5 +1,8 @@
 <%- include('_header',{type: "about"}); %>
-			<article class="post" itemscope itemtype="#">
-Projects
-			</article>
+	<article class="post" itemscope itemtype="#">
+		<div class="content" itemprop="articleBody">
+			<%-describe._render%>
+		</div>
+	</article>
+
 <%- include('_footer',{type: "about"}); %>			
