@@ -10,10 +10,18 @@
 						<li class="icon">
 							<a href="#"><i class="fas fa-bars fa-2x"></i></a>
 						</li>
-						<li><a href="<%=relative_path%>index">Home</a></li>
-						<li><a href="<%=relative_path%>archives">Writing</a></li>
-						<li><a href="<%=relative_path%>about">About</a></li>
-						<li><a href="<%=relative_path%>message">Message</a></li>
+						<li><a href="<%=relative_path%>index">
+						<%=language&&language.home?language.home:'Home'%>
+						</a></li>
+						<li><a href="<%=relative_path%>archives">
+						<%=language&&language.writing?language.writing:'Writing'%>
+						</a></li>
+						<li><a href="<%=relative_path%>about">
+						<%=language&&language.about?language.about:'About'%>
+						</a></li>
+						<li><a href="<%=relative_path%>message">
+						<%=language&&language.message?language.message:'Message'%>
+						</a></li>
 					</ul>
 				</div>
 			</header>

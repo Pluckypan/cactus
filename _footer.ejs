@@ -5,10 +5,18 @@
 				<div class="footer-right">
 					<nav>
 						<ul>
-							<li><a href="<%=relative_path%>index">Home</a></li>
-							<li><a href="<%=relative_path%>archives">Writing</a></li>
-							<li><a href="<%=relative_path%>about">About</a></li>
-							<li><a href="<%=relative_path%>message">Message</a></li>
+							<li><a href="<%=relative_path%>index">
+							<%=language&&language.home?language.home:'Home'%>
+							</a></li>
+							<li><a href="<%=relative_path%>archives">
+							<%=language&&language.writing?language.writing:'Writing'%>
+							</a></li>
+							<li><a href="<%=relative_path%>about">
+							<%=language&&language.about?language.about:'About'%>
+							</a></li>
+							<li><a href="<%=relative_path%>message">
+							<%=language&&language.message?language.message:'Message'%>
+							</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -27,7 +35,7 @@
 		  <script src="<%=relative_path%>lib/clipboard/clipboard.min.js"></script>
 		  <script type="text/javascript">
 		  $(function() {
-			var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+			var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"<%=language&&language.copyTo?language.copyTo:'Copy to clipboard!'%>\">";
 			btn += '<i class="far fa-clone"></i>';
 			btn += '</span>'; 
 			$(".highlight table").before(btn);
@@ -37,7 +45,7 @@
 			  }
 			});
 			clip.on('success', function(e) {
-			  e.trigger.setAttribute('aria-label', "Copied!");
+			  e.trigger.setAttribute('aria-label', "<%=language&&language.copied?language.copied:'Copied!'%>");
 			  e.clearSelection();
 			})
 		  })

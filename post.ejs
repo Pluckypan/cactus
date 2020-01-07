@@ -10,10 +10,18 @@
 		<span id="menu">
 			<span id="nav">
 				<ul>
-					<li><a href="<%=relative_path%>index">Home</a></li>
-					<li><a href="<%=relative_path%>archives">Writing</a></li>
-					<li><a href="<%=relative_path%>about">About</a></li>
-					<li><a href="<%=relative_path%>message">Message</a></li>
+					<li><a href="<%=relative_path%>index">
+					<%=language&&language.home?language.home:'Home'%>
+					</a></li>
+					<li><a href="<%=relative_path%>archives">
+					<%=language&&language.writing?language.writing:'Writing'%>
+					</a></li>
+					<li><a href="<%=relative_path%>about">
+					<%=language&&language.about?language.about:'About'%>
+					</a></li>
+					<li><a href="<%=relative_path%>message">
+					<%=language&&language.message?language.message:'Message'%>
+					</a></li>
 				</ul>
 			</span>
 	
@@ -37,10 +45,10 @@
 						</a>
 					</li>
 				</ul>
-				<span id="i-prev" class="info" style="display:none;">Not Support(Pre)</span>
-				<span id="i-next" class="info" style="display:none;">Not Support(Nex)</span>
-				<span id="i-top" class="info" style="display:none;">Back to top</span>
-				<span id="i-share" class="info" style="display:none;">Not Support(Share)</span>
+				<span id="i-prev" class="info" style="display:none;"><%=language&&language.prepost?language.prepost:'Pre'%></span>
+				<span id="i-next" class="info" style="display:none;"><%=language&&language.nextpost?language.nextpost:'Next'%></span>
+				<span id="i-top" class="info" style="display:none;"><%=language&&language.backToTop?language.backToTop:'Back to Top'%></span>
+				<span id="i-share" class="info" style="display:none;"><%=language&&language.share?language.share:'Share'%></span>
 			</span>
 			<br />
 			<div id="share" style="display: none">
@@ -88,7 +96,7 @@
 					<%}%>
 					<div class="article-category">
 					        <i class="fas fa-archive"></i>
-					        <a class="category-link" href="#">默认</a> › 
+					        <a class="category-link" href="#"><%=language&&language.defaultCat?language.defaultCat:'default'%></a> › 
 							<a class="category-link" href="#"><%=describe.category%></a>
 					</div>
 					<%if(describe.tags&&describe.tags.length>0){%>
@@ -105,7 +113,7 @@
 				{{content}}
 			</div>
 			<%if(config.comment&&config.comment.gitalk&&config.comment.gitalk.clientID){%>
-				<%- include('comment',{type: "post",'pname':'文章'});%>
+				<%- include('comment',{type: "post"});%>
 			<%}%>
 		</article>
 	

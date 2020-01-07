@@ -25,7 +25,7 @@
 		<%}%>
 	  </ul>
 		<div class="pagination">
-			<span class="page-number"> Total <%=allPost&&allPost.length>0?allPost&&allPost.length:0%></span>
+			<span class="page-number"><%=language&&language.total?language.total:'Total'%> <%=allPost&&allPost.length>0?allPost&&allPost.length:0%></span>
 			<!--  <a href="#">
 				<i class="fas fa-angle-right"></i>
 			</a>-->

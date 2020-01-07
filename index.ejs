@@ -3,12 +3,13 @@
 
 				<div id="typed-strings">
 					<p>
-						<%=config.user&&config.user.name?"Hi, I’m  "+config.user.name+"^1000.":""%>
+						<%var sayHi=language&&language.sayHi?language.sayHi:'Hi, I’m  '%>
+						<%=config.user&&config.user.name?sayHi+config.user.name+"^1000.":""%>
 						<br>
 						<%=config.user&&config.user.desc?config.user.desc+"^500":""%>
 						<br>
 						<%if(config.user.social&&config.user.social.length>0){%>
-							Find me on
+							<%=language&&language.followMe?language.followMe:'Find me on'%>
 							<%var family=config.iconfont&&config.iconfont.family?config.iconfont.family:'fab'%>
 							<%config.user.social.forEach(function(l,i){%>
 								<a class="icon" href="<%=l.link%>" target="<%=l.target%>">
@@ -31,7 +32,7 @@
 
 			<section id="writing">
 				<span class="h1">
-					<a href="archives">Writing</a>
+					<a href="archives"><%=language&&language.writing?language.writing:'Writing'%></a>
 				</span>
 				<ul class="post-list">
 					<%if(allPost&&allPost.length>0){%>
