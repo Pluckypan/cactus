@@ -11,7 +11,10 @@
 		<link rel="icon" type="image/png" href="<%=relative_path%>images/favicon-192x192.png" sizes="192x192">
 		<link rel="apple-touch-icon" sizes="180x180" href="<%=relative_path%>images/apple-touch-icon.png">
 		<!-- title -->
-		<title>Cactus Dark</title>
+		<title><%=describe.name?describe.name+' - ':''%><%=config.title%></title>
+		<%if(config.iconfont&&config.iconfont.link){%>
+			<link rel="stylesheet" href="<%=config.iconfont.link%>">
+		<%}%>
 		<!-- styles -->
 		<link rel="stylesheet" href="<%=relative_path%>css/style.css">
 		<!-- persian styles -->
