@@ -2,6 +2,9 @@
 	<article class="post" itemscope itemtype="#">
 		<div class="content" itemprop="articleBody">
 			<%-describe._render%>
+			<%if(config.comment&&config.comment.gitalk&&config.comment.gitalk.clientID){%>
+				<%- include('comment',{type: "post",'pname':'文章'});%>
+			<%}%>
 		</div>
 	</article>
 

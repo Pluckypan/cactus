@@ -24,11 +24,11 @@
 			<%});%>
 		<%}%>
 	  </ul>
-	    <div class="pagination">
-	        <span class="page-number">Page 1 of 2</span>
-	        <a href="#">
+		<div class="pagination">
+			<span class="page-number"> Total <%=allPost&&allPost.length>0?allPost&&allPost.length:0%></span>
+			<!--  <a href="#">
 				<i class="fas fa-angle-right"></i>
-	        </a>
-	    </div>
+			</a>-->
+		</div>
 	</div>
 <%- include('_footer',{type: "archives"}); %>
