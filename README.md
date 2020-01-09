@@ -1,8 +1,8 @@
 # cactus
-a theme for the Hexo blogging framework - **`eedoc`**
+a theme for the eedoc blogging framework - **`eedoc`**
 
 
-Hi, I’m a theme for the Hexo blogging framework. I’m particularly great for a personal web page with a simple blog.
+Hi, I’m a theme for the eedoc blogging framework. I’m particularly great for a personal web page with a simple blog.
 <br>
 <br>
 ![logo](images/cactus.png?align=center)
