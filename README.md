@@ -30,3 +30,6 @@ $ eedoc -t clone git@github.com:Pluckypan/cactus.git
 $ eedoc -b
 $ eedoc -s 2020
 ```
+
+## Thanks
+many **thanks** to [hexo-theme-cactus](https://github.com/probberechts/hexo-theme-cactus).`hey probberechts` ,you do a great job.
