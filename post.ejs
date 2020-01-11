@@ -96,8 +96,7 @@
 					<%}%>
 					<div class="article-category">
 					        <i class="fas fa-archive"></i>
-					        <a class="category-link" href="#"><%=language&&language.defaultCat?language.defaultCat:'default'%></a> › 
-							<a class="category-link" href="#"><%=describe.category%></a>
+							<a class="category-link" href="#<%=describe.category_id%>"><%=describe.category%></a>
 					</div>
 					<%if(describe.tags&&describe.tags.length>0){%>
 						<div class="article-tag">
